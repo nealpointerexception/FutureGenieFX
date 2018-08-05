@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="554.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="fileOpenBtn" layoutX="376.0" layoutY="23.0" mnemonicParsing="false" onAction="#openFile" text="OPEN" />
+      <LineChart fx:id="plot" layoutX="10.0" layoutY="218.0" prefHeight="327.0" prefWidth="504.0">
+        <xAxis>
+
+          <NumberAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+
+          <NumberAxis fx:id="yAxis" prefHeight="189.0" prefWidth="32.0" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <RadioButton fx:id="buy1" layoutX="188.0" layoutY="84.0" mnemonicParsing="false" onAction="#buy1Sel" text="Buy" />
+      <Label layoutX="21.0" layoutY="87.0" text="Index:" />
+      <ChoiceBox fx:id="indexMenu1" layoutX="68.0" layoutY="80.0" prefHeight="25.0" prefWidth="112.0" />
+      <RadioButton fx:id="sell1" layoutX="242.0" layoutY="84.0" mnemonicParsing="false" onAction="#sell1Sel" text="Sell" />
+      <TextField fx:id="shares1" layoutX="304.0" layoutY="80.0" prefHeight="25.0" prefWidth="118.0" promptText="Shares" />
+      <Label fx:id="filePathLabel" layoutX="31.0" layoutY="27.0" prefHeight="15.0" prefWidth="331.0" text="File Path" />
+      <TextField fx:id="shares2" layoutX="305.0" layoutY="112.0" prefHeight="25.0" prefWidth="118.0" promptText="Shares" />
+      <RadioButton fx:id="sell2" layoutX="243.0" layoutY="116.0" mnemonicParsing="false" onAction="#sell2Sel" text="Sell" />
+      <ChoiceBox fx:id="indexMenu2" layoutX="69.0" layoutY="112.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="22.0" layoutY="119.0" text="Index:" />
+      <RadioButton fx:id="buy2" layoutX="189.0" layoutY="116.0" mnemonicParsing="false" onAction="#buy2Sel" text="Buy" />
+      <TextField fx:id="shares3" layoutX="305.0" layoutY="141.0" prefHeight="25.0" prefWidth="118.0" promptText="Shares" />
+      <RadioButton fx:id="sell3" layoutX="243.0" layoutY="145.0" mnemonicParsing="false" onAction="#sell3Sel" text="Sell" />
+      <ChoiceBox fx:id="indexMenu3" layoutX="69.0" layoutY="141.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="22.0" layoutY="148.0" text="Index:" />
+      <RadioButton fx:id="buy3" layoutX="189.0" layoutY="145.0" mnemonicParsing="false" onAction="#buy3Sel" text="Buy" />
+      <Button fx:id="finishBtn" layoutX="368.0" layoutY="198.0" mnemonicParsing="false" onAction="#parseVals" text="DONE" />
+      <Label fx:id="netVal" layoutX="68.0" layoutY="203.0" prefHeight="15.0" prefWidth="285.0" text="Net Amount: " />
+   </children>
+</Pane>
